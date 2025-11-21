@@ -378,3 +378,19 @@ document.getElementById('blogCarousel')?.addEventListener('scroll', updateBlogCa
 
 // Initialize button states
 document.addEventListener('DOMContentLoaded', updateBlogCarouselButtons);
+
+
+function toggleUserMenu() {
+    let menu = document.getElementById("userMenu");
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
+
+document.addEventListener("click", function(e) {
+    const menu = document.getElementById("userMenu");
+    const icon = document.querySelector(".user-icon");
+
+    if (!icon.contains(e.target) && !menu.contains(e.target)) {
+        menu.style.display = "none";
+    }
+});
+

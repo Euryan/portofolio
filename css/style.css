@@ -2103,3 +2103,56 @@
                 font-size: 0.8rem;
             }
         }
+
+        /* USER DROPDOWN */
+
+.user-dropdown {
+    position: relative;
+    margin-left: 20px;
+}
+
+.user-icon img {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    object-fit: cover;
+    transition: 0.3s ease;
+}
+
+.user-icon img:hover {
+    border-color: #1a1a1a;
+}
+
+/* Dropdown Box */
+.user-menu {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 10px 0;
+    width: 150px;
+    display: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    z-index: 999;
+}
+
+.user-menu li {
+    list-style: none;
+    padding: 0;
+}
+
+.user-menu li a {
+    display: block;
+    padding: 10px 15px;
+    color: #1a1a1a;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.user-menu li a:hover {
+    background: #f3f3f3;
+}
