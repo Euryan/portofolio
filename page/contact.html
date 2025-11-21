@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Portfolio</a>
+           <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./skills.html">Skills</a></li>
+                <li><a href="./experience.html">Experience</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="./blog.html">Blog</a></li> <!-- TAMBAHKAN INI -->
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="language-switch">
+                <button onclick="toggleDropdown()">🌐 ID</button>
+                <ul id="lang-menu" style="display:none">
+                    <li><a href="/en">🇺🇸 EN</a></li>
+                    <li><a href="/id">🇮🇩 ID</a></li>
+                </ul>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Let's Discuss Your Project</p>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About</h3>
+                <p>Professional software engineer specializing in full-stack development and enterprise solutions.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#about">About Me</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#blog">Blog</a> 
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+                <a href="#">Twitter</a>
+                <a href="#">Email</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 John Anderson. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal Pop-up -->
+    <div class="modal" id="projectModal">
+        <div class="modal-overlay" onclick="closeModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img src="" alt="Project Image" id="modalImage">
+                </div>
+                <div class="modal-info">
+                    <div class="modal-category" id="modalCategory"></div>
+                    <h2 id="modalTitle"></h2>
+                    <!-- Image Showcase Gallery -->
+                    <div class="modal-showcase">
+                        <h3>Project Showcase</h3>
+                        <div class="showcase-container">
+                            <button class="showcase-nav showcase-prev" onclick="scrollShowcase('prev')">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="15 18 9 12 15 6"></polyline>
+                                </svg>
+                            </button>
+                            <div class="showcase-gallery" id="showcaseGallery">
+                            </div>
+                            <button class="showcase-nav showcase-next" onclick="scrollShowcase('next')">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <p id="modalDescription"></p>
+                    
+                    
+                    
+                    <div class="modal-details">
+                        <h3>Project Details</h3>
+                        <div id="modalDetailsList"></div>
+                    </div>
+                    
+                    <div class="modal-links">
+                        <h3>Links</h3>
+                        <div class="social-links" id="modalSocialLinks"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./pengenpisah.js"></script>
+</body>
+</html>

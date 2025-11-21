@@ -1,0 +1,138 @@
+ <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Portfolio</a>
+           <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./skills.html">Skills</a></li>
+                <li><a href="./experience.html">Experience</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="./blog.html">Blog</a></li> <!-- TAMBAHKAN INI -->
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+            <div class="language-switch">
+                <button onclick="toggleDropdown()">🌐 ID</button>
+                <ul id="lang-menu" style="display:none">
+                    <li><a href="/en">🇺🇸 EN</a></li>
+                    <li><a href="/id">🇮🇩 ID</a></li>
+                </ul>
+             </div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <section class="projects" id="projects">
+        <div class="projects-container">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Selected Works & Case Studies</p>
+          <div class="blog-grid">
+
+            <article class="blog-card" onclick="openProjectModal(1)">
+                <div class="blog-image">
+                    <img src="../assets/img/hidro.jpg" alt="HIDRO">
+                    <div class="blog-date">2024</div>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-category">Agriculture · AI Robotics</div>
+                    <h3 class="blog-title">HIDRO – Plant Disease Detection Robot</h3>
+                    <p class="blog-excerpt">
+                        A CNN-based robot capable of detecting crop diseases in real-time.
+                    </p>
+                    <a href="#" class="blog-read-more">View Details →</a>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="openProjectModal(2)">
+                <div class="blog-image">
+                    <img src="../assets/img/autigaze.png" alt="AutiGaze">
+                    <div class="blog-date">2025</div>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-category">Healthcare · Computer Vision</div>
+                    <h3 class="blog-title">AutiGaze – Autism Spectrum Disorder Detection</h3>
+                    <p class="blog-excerpt">
+                        AI-based behavioral analysis for early ASD screening.
+                    </p>
+                    <a href="#" class="blog-read-more">View Details →</a>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="openProjectModal(3)">
+                <div class="blog-image">
+                    <img src="../assets/img/cubin.jpg" alt="CUBIN">
+                    <div class="blog-date">2025</div>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-category">Waste Management · IoT</div>
+                    <h3 class="blog-title">CUBIN – Smart Waste Sorting Bin</h3>
+                    <p class="blog-excerpt">
+                        YOLOv8-powered trash classification with real-time IoT monitoring.
+                    </p>
+                    <a href="#" class="blog-read-more">View Details →</a>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="openProjectModal(4)">
+                <div class="blog-image">
+                    <img src="../assets/img/drowsinnes.png" alt="Drowsiness Detection">
+                    <div class="blog-date">2025</div>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-category">Safety & Transportation</div>
+                    <h3 class="blog-title">Driver Drowsiness Detection System</h3>
+                    <p class="blog-excerpt">
+                        A cabin safety system using CV + IoT to monitor fatigue, heart rate, and environment.
+                    </p>
+                    <a href="#" class="blog-read-more">View Details →</a>
+                </div>
+            </article>
+
+        </div>
+    </div>
+   </section>
+
+            <div class="modal blog-modal" id="blogModal">
+                <div class="modal-overlay" onclick="closeBlogModal()"></div>
+                <div class="modal-content blog-modal-content">
+                    <button class="modal-close" onclick="closeBlogModal()">&times;</button>
+                    <div class="blog-modal-body">
+                        <div class="blog-modal-header">
+                            <div class="blog-modal-category" id="blogModalCategory"></div>
+                            <h1 id="blogModalTitle"></h1>
+                            <div class="blog-modal-meta">
+                                <span class="blog-modal-date" id="blogModalDate"></span>
+                                <span class="blog-modal-reading-time" id="blogModalReadingTime"></span>
+                            </div>
+                        </div>
+                        <div class="blog-modal-image">
+                            <img src="" alt="" id="blogModalImage">
+                        </div>
+                        <div class="blog-modal-content-text" id="blogModalContent"></div>
+                    </div>
+                </div>
+            </div>
+       </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../pengenpisah.js"></script>
+</body>
+</html>

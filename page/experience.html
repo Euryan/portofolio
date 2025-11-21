@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Portfolio</a>
+           <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./skills.html">Skills</a></li>
+                <li><a href="./experience.html">Experience</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="./blog.html">Blog</a></li> <!-- TAMBAHKAN INI -->
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+
+            <div class="language-switch">
+                <button onclick="toggleDropdown()">🌐 ID</button>
+                <ul id="lang-menu" style="display:none">
+                    <li><a href="/en">🇺🇸 EN</a></li>
+                    <li><a href="/id">🇮🇩 ID</a></li>
+                </ul>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <h2 class="section-title">Experience</h2>
+        <p class="section-subtitle">Professional Journey</p>
+        <div class="experience-container">
+            <div class="timeline">
+
+                <!-- 2023 – Starting Robotics -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023</div>
+                        <h3 class="timeline-title">Started Robotics Journey</h3>
+                        <div class="timeline-company">SMPN 16 Cimahi</div>
+                        <p class="timeline-description">
+                            My journey began after attending a STEAM webinar hosted by UPI at my school.
+                            That moment sparked my passion for robotics and technology, pushing me to explore hands-on experimentation and self-learning.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 2024 – IoT Training at Nusabot -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024</div>
+                        <h3 class="timeline-title">IoT Training & Web Development</h3>
+                        <div class="timeline-company">Nusabot Indonesia</div>
+                        <p class="timeline-description">
+                            I joined an intensive IoT training program where I learned the fundamentals of
+                            microcontrollers, web development, and programming logic.
+                            This experience led to my first fully integrated IoT + web project, strengthening
+                            my understanding of real-world system integration.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 2024 – Creating HIDRO! -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024</div>
+                        <h3 class="timeline-title">Created HIDRO! – Plant Disease Detection Robot</h3>
+                        <div class="timeline-company">Independent Innovation Project</div>
+                        <p class="timeline-description">
+                            I successfully built <strong>HIDRO!</strong>, an agricultural robot capable of detecting
+                            plant diseases using CNN-based computer vision.
+                            This became one of my first major innovations combining robotics,
+                            machine learning, and embedded systems.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 2025 – First Competition Qualification -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2025</div>
+                        <h3 class="timeline-title">Qualified for My First Competition</h3>
+                        <div class="timeline-company">ITB | West Java Region</div>
+                        <p class="timeline-description">
+                            I qualified for my first regional technology competition in West Java,
+                            earning the opportunity to present my work at the Bandung Institute of Technology (ITB).
+                            This marked a major milestone in my early career.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 2025 – Achievement at Microsoft Technopreneur Competition -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2025</div>
+                        <h3 class="timeline-title">Winner – Microsoft Technopreneur Competition</h3>
+                        <div class="timeline-company">ITB x Microsoft</div>
+                        <p class="timeline-description">
+                            I achieved my first major award by winning the Microsoft Technopreneur Competition at ITB.
+                            This recognition strengthened my confidence as a young innovator in AI, robotics, and IoT.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About</h3>
+                <p>Professional software engineer specializing in full-stack development and enterprise solutions.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#about">About Me</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#blog">Blog</a> <!-- TAMBAHKAN INI -->
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+                <a href="#">Twitter</a>
+                <a href="#">Email</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 John Anderson. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- Modal Pop-up -->
+    <div class="modal" id="projectModal">
+        <div class="modal-overlay" onclick="closeModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img src="" alt="Project Image" id="modalImage">
+                </div>
+                <div class="modal-info">
+                    <div class="modal-category" id="modalCategory"></div>
+                    <h2 id="modalTitle"></h2>
+                    <!-- Image Showcase Gallery -->
+                    <div class="modal-showcase">
+                        <h3>Project Showcase</h3>
+                        <div class="showcase-container">
+                            <button class="showcase-nav showcase-prev" onclick="scrollShowcase('prev')">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="15 18 9 12 15 6"></polyline>
+                                </svg>
+                            </button>
+                            <div class="showcase-gallery" id="showcaseGallery">
+                                <!-- Thumbnails will be inserted here -->
+                            </div>
+                            <button class="showcase-nav showcase-next" onclick="scrollShowcase('next')">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <p id="modalDescription"></p>
+                    
+                    
+                    
+                    <div class="modal-details">
+                        <h3>Project Details</h3>
+                        <div id="modalDetailsList"></div>
+                    </div>
+                    
+                    <div class="modal-links">
+                        <h3>Links</h3>
+                        <div class="social-links" id="modalSocialLinks"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../pengenpisah.js"></script>
+</body>
+</html>

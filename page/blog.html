@@ -1,0 +1,173 @@
+ <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Portfolio</a>
+           <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./skills.html">Skills</a></li>
+                <li><a href="./experience.html">Experience</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="./blog.html">Blog</a></li> <!-- TAMBAHKAN INI -->
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+            <div class="language-switch">
+                <button onclick="toggleDropdown()">🌐 ID</button>
+                <ul id="lang-menu" style="display:none">
+                    <li><a href="/en">🇺🇸 EN</a></li>
+                    <li><a href="/id">🇮🇩 ID</a></li>
+                </ul>
+             </div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+    </nav>
+
+
+ <section class="blog" id="blog">
+        <div class="blog-container">
+            <h2 class="section-title">Blog & Stories</h2>
+            <p class="section-subtitle">Personal Experiences & Life Achievements</p>
+            
+            <div class="blog-grid">
+                <!-- Blog Card 1 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="../assets/img/win1.jpg" alt="Blog Post 1">
+                        <div class="blog-date">15 Nov 2025</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-category">Achievement</div>
+                        <h3 class="blog-title">Winning My First Robotics Competition</h3>
+                        <p class="blog-excerpt">An incredible journey of building an autonomous robot from scratch and competing against teams from across the region. This experience taught me the importance of teamwork and perseverance.</p>
+                        <a href="#" class="blog-read-more" onclick="event.preventDefault(); openBlogModal(1)">Read More â†’</a>
+                    </div>
+                </article>
+
+              <!-- Blog Card 3 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="../assets/img/firstrobotic.jpg" alt="Blog Post 3">
+                        <div class="blog-date">20 Oct 2025</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-category">Learning Journey</div>
+                        <h3 class="blog-title">My Journey into Robotics</h3>
+                        <p class="blog-excerpt">Reflections on the responsibility we have as technology creators. How I'm trying to ensure my projects contribute positively to society while considering ethical implications.</p>
+                        <a href="#" class="blog-read-more" onclick="event.preventDefault(); openBlogModal(3)">Read More â†’</a>
+                    </div>
+                </article>
+
+                
+                <!-- Blog Card 4 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="../assets/img/smpn53.jpg" alt="Blog Post 4">
+                        <div class="blog-date">05 Oct 2025</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-category">Experience</div>
+                        <h3 class="blog-title">Invited to Robotics Showcase with BBGP Jabar at SMPN 53 Bandung</h3>
+                        <p class="blog-excerpt">From concept to implementation: creating a smart home system using ESP32 and MQTT protocol. The challenges I faced and lessons learned along the way.</p>
+                        <a href="#" class="blog-read-more" onclick="event.preventDefault(); openBlogModal(4)">Read More â†’</a>
+                    </div>
+                </article>
+
+               <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="../assets/img/sithitb.jpg" alt="Blog Post 7">
+                        <div class="blog-date">01 Sep 2025</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-category">Experience</div>
+                        <h3 class="blog-title">Discussing Environmental Technology Project with SITB ITB Lecturer</h3>
+                        <p class="blog-excerpt">My strategies for managing time between academic responsibilities, personal projects, and maintaining a healthy lifestyle. Tips that have worked for me as a student.</p>
+                        <a href="#" class="blog-read-more" onclick="event.preventDefault(); openBlogModal(6)">Read More â†’</a>
+                    </div>
+                </article>
+
+            
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="../assets/img/blog2.jpg" alt="Blog Post 2">
+                        <div class="blog-date">02 Nov 2025</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-category">Learning Journey</div>
+                        <h3 class="blog-title">My Journey into Machine Learning</h3>
+                        <p class="blog-excerpt">Discovering the fascinating world of AI and machine learning. From understanding basic algorithms to implementing my first computer vision project using YOLO.</p>
+                        <a href="#" class="blog-read-more" onclick="event.preventDefault(); openBlogModal(2)">Read More â†’</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="assets/img/blog5.jpg" alt="Blog Post 5">
+                        <div class="blog-date">18 Sep 2025</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-category">Milestone</div>
+                        <h3 class="blog-title">Completing My First Web Development Project</h3>
+                        <p class="blog-excerpt">The story behind creating my first full-stack web application. From learning HTML/CSS to deploying a live website that actually helps people.</p>
+                        <a href="#" class="blog-read-more" onclick="event.preventDefault(); openBlogModal(5)">Read More â†’</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="../assets/img/" alt="Blog Post 6">
+                        <div class="blog-date">01 Sep 2025</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-category">Personal Growth</div>
+                        <h3 class="blog-title">Balancing School, Projects, and Personal Life</h3>
+                        <p class="blog-excerpt">My strategies for managing time between academic responsibilities, personal projects, and maintaining a healthy lifestyle. Tips that have worked for me as a student.</p>
+                        <a href="#" class="blog-read-more" onclick="event.preventDefault(); openBlogModal(6)">Read More â†’</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal blog-modal" id="blogModal">
+        <div class="modal-overlay" onclick="closeBlogModal()"></div>
+        <div class="modal-content blog-modal-content">
+            <button class="modal-close" onclick="closeBlogModal()">&times;</button>
+            <div class="blog-modal-body">
+                <div class="blog-modal-header">
+                    <div class="blog-modal-category" id="blogModalCategory"></div>
+                    <h1 id="blogModalTitle"></h1>
+                    <div class="blog-modal-meta">
+                        <span class="blog-modal-date" id="blogModalDate"></span>
+                        <span class="blog-modal-reading-time" id="blogModalReadingTime"></span>
+                    </div>
+                </div>
+                <div class="blog-modal-image">
+                    <img src="" alt="" id="blogModalImage">
+                </div>
+                <div class="blog-modal-content-text" id="blogModalContent"></div>
+            </div>
+        </div>
+    </div>
+       </div>
+            </div>
+        </div>
+    </div>
+    <script src="../pengenpisah.js"></script>
+</body>
+</html>
